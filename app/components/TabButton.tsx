@@ -6,7 +6,7 @@ type Props = {
 
 function TabButton({ active, selectTab, children }: Props) {
   const buttonClasses = active
-    ? "text-white border-b border-purple-500"
+    ? "text-white border-b border-primary-500"
     : "text-[#ADB7BE]";
 
   return (
