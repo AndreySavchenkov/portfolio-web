@@ -47,7 +47,7 @@ function ProjectsSection() {
   };
 
   return (
-    <section>
+    <section id="projects">
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-4">
         My Projects
       </h2>

@@ -4,8 +4,11 @@ import Image from "next/image";
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import { useRouter } from 'next/navigation';
 
 const HeroSection = () => {
+  const router = useRouter();
+
   return (
     <section>
       <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -32,12 +35,17 @@ const HeroSection = () => {
             text
           </p>
           <div className="">
-            <button className="px-6 py-3 w-full  sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-white mt-3">
+            <button
+              onClick={() => router.push("#contact")}
+              className="px-6 py-3 w-full  sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-white mt-3"
+            >
               Hire Me
             </button>
             <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3">
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+                <a href="/AndreiWebCV.pdf" download>
                 Download CV
+                </a>
               </span>
             </button>
           </div>
